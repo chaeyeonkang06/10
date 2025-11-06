@@ -10,8 +10,22 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    char str[30] = "happt C programming";
+    char input[100];
+    FILE* fp;
+    int i;
     
-    printf("문자열\"%s\"의 길이: %i\n", str, strlen(str));
+    //fopen
+    fp = fopen("sample.txt","w");
+    
+    for(i=0;i<3;i++){
+        //fprintf
+        printf("input a word:");
+        scanf("%s", input); //'&'쓰지 않아요
+        fprintf(fp, "%s\n", input);
+    }
+    
+    //fclose
+    fclose(fp);
+    
     return 0;
 }
