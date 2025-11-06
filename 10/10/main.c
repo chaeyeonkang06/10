@@ -1,0 +1,18 @@
+//
+//  main.c
+//  10
+//
+//  Created by 강채연 on 11/6/25.
+//
+
+#include <stdio.h>
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+        char code1 = 'A';
+        int code2 = 65;
+        
+        printf("code1 = %c, (%d)\n", code1,code1);
+        printf("code2 = %c, (%d)\n", code2, code2);
+        return 0;
+}
