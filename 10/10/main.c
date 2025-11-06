@@ -12,17 +12,24 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     char input[100];
     FILE* fp;
-    int i;
+    char c;
     
     //fopen
-    fp = fopen("sample.txt","w");
+    fp = fopen("/Users/kangchaeyeon/Desktop/2025-2/전자공학도를 위한 프로그래밍 기초/10/10/sample.txt","r");
     
-    for(i=0;i<3;i++){
-        //fprintf
-        printf("input a word:");
-        scanf("%s", input); //'&'쓰지 않아요
-        fprintf(fp, "%s\n", input);
+#if 0
+    while( (c = fgetc(fp)) != EOF)
+    {
+        putchar(c);
     }
+#endif
+    
+#if 1
+    while( fgets(input, 100, fp) != 0) //혹은 >0
+    {
+        printf("%s", input);
+    }
+#endif
     
     //fclose
     fclose(fp);
