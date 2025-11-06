@@ -10,11 +10,8 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    char src[] = "The worsst things to eat before you sleep";
-    char dst[100];
+    char str[30] = "happt C programming";
     
-    strcpy(dst, src);
-    
-    printf("copied string : %s\n", dst);
+    printf("문자열\"%s\"의 길이: %i\n", str, strlen(str));
     return 0;
 }
