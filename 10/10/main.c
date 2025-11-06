@@ -6,19 +6,15 @@
 //
 
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    int i = 0;
-    char str[4];
-    str[0] = 'a';
-    str[1] = 'b';
-    str[2] = 'c';
-    str[3] = '\0';
-  
-    while(str[i] != '\0'){
-        printf("%c", str[i]);
-        i++;
-    }
+    char src[] = "The worsst things to eat before you sleep";
+    char dst[100];
+    
+    strcpy(dst, src);
+    
+    printf("copied string : %s\n", dst);
     return 0;
 }
